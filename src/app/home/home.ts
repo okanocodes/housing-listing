@@ -23,9 +23,6 @@ import { HousingService } from '../housing.service';
     <section class="results">
       @for (housingLocation of filteredLocationList(); track housingLocation.id) {
       <app-housing-location [housingLocation]="housingLocation"></app-housing-location>
-
-      } @empty {
-      <li aria-hidden="true">There are no house.</li>
       }
     </section>
   `,
