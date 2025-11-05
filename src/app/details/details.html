@@ -1,0 +1,41 @@
+@if (housingLocation) {
+<article>
+  <img class="listing-photo" [src]="housingLocation.photo" [alt]="housingLocation.name" />
+  <section class="listing-details">
+    <h2 class="listing-heading">{{ housingLocation.name }}</h2>
+    <p class="listing-location">{{ housingLocation.city }}, {{ housingLocation.state }}</p>
+  </section>
+  <section class="listing-features">
+    <h2 class="section-heading">About this location</h2>
+    <ul>
+      <li><strong>Units available:</strong> {{ housingLocation.availableUnits }}</li>
+      <li>
+        <strong>Does this location have wifi:</strong> {{ housingLocation.wifi ? 'Yes' : 'No' }}
+      </li>
+      <li>
+        <strong>Does this location have laundry:</strong>
+        {{ housingLocation.laundry ? 'Yes' : 'No' }}
+      </li>
+    </ul>
+  </section>
+  <section class="listing-apply">
+    
+    <button class="toggle" (click)="toggleForm()">{{ hideForm ? 'Apply to live here' : 'Close form' }}</button>
+
+    @if (hideForm === false) {
+    <form [formGroup]="applyForm" (submit)="submitApplication()">
+      <label for="first-name">First Name</label>
+      <input type="text" id="first-name" formControlName="firstName" />
+      <label for="last-name">First Name</label>
+      <input type="text" id="last-name" formControlName="lastName" />
+      <label for="email">Email</label>
+      <input type="email" id="email" formControlName="email" />
+      <button class="primary" type="submit">Aplly now</button>
+    </form>
+    }
+  </section>
+</article>
+
+}
+
+
