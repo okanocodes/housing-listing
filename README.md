@@ -1,6 +1,14 @@
-# MyFirstAngularApp
+# Housing Listing angular app
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+
+## Quick start
+
+Install dependencies:
+
+```bash
+npm install
+```
 
 ## Development server
 
@@ -11,6 +19,16 @@ ng serve
 ```
 
 Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+
+## Mock API Server
+
+A simple local mock API helps development without a real backend.
+
+```bash
+json-server --watch db.json --port 3000
+```
+
+API URL: `http://localhost:3000/listings`
 
 ## Code scaffolding
 
