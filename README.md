@@ -1,6 +1,6 @@
-# Housing Listing angular app
+# Housing Listing Angular App
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.3.6.
+This is my first angular project by following official angular documentation and tutorials.
 
 ## Quick start
 
